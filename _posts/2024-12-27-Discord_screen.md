@@ -45,7 +45,7 @@ $ echo $XDG_SESSION_TYPE
 
 ## Wayland
 <p align="center">
-    <img src="../assets/resource/wayland구조.png" width="50%" height="50%">
+    <img src="../assets/resource/wayland구조.png" width="30%" height="30%">
 </p>
 - Wayland 역시 X11과 동일한 기능을 가진 프로그램이다.
 - 단, 구조에서 차이가 난다.
