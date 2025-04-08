@@ -25,7 +25,8 @@
                     {%- endif -%}
                     <!-- utteranc -->
                     <script>
-                        if (!document.querySelector('script[src="https://utteranc.es/client.js"]')) {
+                        // Ensure that the script is added after the page content has fully loaded
+                        document.addEventListener('DOMContentLoaded', function () {
                             const script = document.createElement('script');
                             script.src = "https://utteranc.es/client.js";
                             script.setAttribute('repo', 'juhyeon98/blog-comments');
@@ -33,8 +34,13 @@
                             script.setAttribute('theme', 'github-light');
                             script.setAttribute('crossorigin', 'anonymous');
                             script.async = true;
-                            document.body.appendChild(script);
-                        }
+
+                            // Insert the script inside the section after the content is loaded
+                            const section = document.querySelector('.normal.markdown-section');
+                            if (section) {
+                                section.appendChild(script);
+                            }
+                        });
                     </script>
 
                 </section>
