@@ -23,10 +23,16 @@
                     {%- if jekyll.environment != 'dev' and site.disqushandler -%}
                         {%- include disqus.html -%}
                     {%- endif -%}
+                    <!-- utteranc -->
+                    <script src="https://utteranc.es/client.js"
+                        repo="juhyeon98/blog-comments"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                    </script>
                 </section>
             </div>
-
-            {%- include comment.html -%}
 
             {%- include search.html -%}
         </div>
