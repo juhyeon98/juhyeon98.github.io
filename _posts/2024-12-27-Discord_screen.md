@@ -68,6 +68,6 @@ WaylandEnable=false
 - 재부팅을 해서 화면 공유를 시도하면, 정상적으로 동작하는 것을 확인할 수 있다.
 
 ## 참고한 자료
-[X11](https://ko.wikipedia.org/wiki/X_%EC%9C%88%EB%8F%84_%EC%8B%9C%EC%8A%A4%ED%85%9C)
-[Wayland](https://wayland.freedesktop.org/architecture.html)
-[X11 vs Wayland](https://www.linux.org/threads/advantages-of-wayland-over-x11.49441/)
+- [X11](https://ko.wikipedia.org/wiki/X_%EC%9C%88%EB%8F%84_%EC%8B%9C%EC%8A%A4%ED%85%9C)
+- [Wayland](https://wayland.freedesktop.org/architecture.html)
+- [X11 vs Wayland](https://www.linux.org/threads/advantages-of-wayland-over-x11.49441/)
