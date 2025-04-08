@@ -4,6 +4,7 @@ author: 이주현
 date: 2024-12-27
 category: Linux
 layout: post
+tag: [Linux, Discord, X11, Wayland]
 published: true
 ---
 
