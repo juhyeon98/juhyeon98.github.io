@@ -24,13 +24,19 @@
                         {%- include disqus.html -%}
                     {%- endif -%}
                     <!-- utteranc -->
-                    <script src="https://utteranc.es/client.js"
-                        repo="juhyeon98/blog-comments"
-                        issue-term="pathname"
-                        theme="github-light"
-                        crossorigin="anonymous"
-                        async>
+                    <script>
+                        if (!document.querySelector('script[src="https://utteranc.es/client.js"]')) {
+                            const script = document.createElement('script');
+                            script.src = "https://utteranc.es/client.js";
+                            script.setAttribute('repo', 'juhyeon98/blog-comments');
+                            script.setAttribute('issue-term', 'pathname');
+                            script.setAttribute('theme', 'github-light');
+                            script.setAttribute('crossorigin', 'anonymous');
+                            script.async = true;
+                            document.body.appendChild(script);
+                        }
                     </script>
+
                 </section>
             </div>
 
