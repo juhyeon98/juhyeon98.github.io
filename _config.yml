@@ -73,3 +73,5 @@ plugins:
   - jekyll-readme-index
   - jemoji
   - jekyll-sitemap
+
+futrue: true
