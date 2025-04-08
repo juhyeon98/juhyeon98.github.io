@@ -35,6 +35,15 @@
                 <div class="body-inner">
                     {%- include body.html -%}
 
+                    <!-- utteranc -->
+                    <script src="https://utteranc.es/client.js"
+                            repo="juhyeon98/blog-comments"
+                            issue-term="pathname"
+                            theme="github-light"
+                            crossorigin="anonymous"
+                            async>
+                    </script>
+
                     {% if page.previous %}
                         <a href="{{site.baseurl}}{{page.previous.url}}" class="navigation navigation-prev navigation-unique" aria-label="Previous page: {{page.previous.title}}">
                             <i class="fa fa-angle-left"></i>
@@ -51,14 +60,6 @@
                         </a>
                     {% endif %}
                 </div>
-                <!-- utteranc -->
-                <script src="https://utteranc.es/client.js"
-        repo="juhyeon98/blog-comments"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
             </div>
 
             <script>
