@@ -27,13 +27,7 @@
 
                 </section>
                 <!-- utteranc -->
-                <script src="https://utteranc.es/client.js"
-                    repo="juhyeon98/blog-comments"
-                    issue-term="pathname"
-                    theme="github-light"
-                    crossorigin="anonymous"
-                    async>
-                </script>
+                <div id="utterances-container"></div>
             </div>
 
             {%- include search.html -%}
@@ -51,3 +45,58 @@
 
 <!-- introduce mathjax support -->
 {% include fixes-chrome-anchors.html %}
+
+<!-- utteranc -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // utterances 초기화 스크립트 생성
+    const utterancesScript = document.createElement('script');
+    utterancesScript.src = 'https://utteranc.es/client.js';
+    utterancesScript.setAttribute('repo', 'juhyeon98/blog-comments');
+    utterancesScript.setAttribute('issue-term', 'pathname');
+    utterancesScript.setAttribute('theme', 'github-light');
+    utterancesScript.setAttribute('crossorigin', 'anonymous');
+    utterancesScript.async = true;
+    
+    // utterances 초기화 함수
+    function initUtterances() {
+        const commentsContainer = document.querySelector('.search-noresults');
+        if (commentsContainer) {
+        // 기존 utterances가 있으면 제거
+        const existingUtterances = document.querySelector('.utterances');
+        if (existingUtterances) {
+            existingUtterances.remove();
+        }
+        
+        // utterances 초기화 스크립트 추가
+        commentsContainer.appendChild(utterancesScript.cloneNode(true));
+        }
+    }
+    
+    // 페이지 로드 시 초기화
+    initUtterances();
+    
+    // GitBook 네비게이션 이벤트에 대한 리스너 - 이벤트 이름은 조정이 필요할 수 있음
+    document.addEventListener('page.change', function() {
+        setTimeout(initUtterances, 100); // DOM 업데이트를 위한 작은 지연
+    });
+    });
+
+    function reloadUtterances() {
+    const utterancesContainer = document.getElementById('utterances-container');
+    utterancesContainer.innerHTML = ''; // 기존 내용 제거
+    
+    const script = document.createElement('script');
+    script.src = 'https://utteranc.es/client.js';
+    script.setAttribute('repo', 'juhyeon98/blog-comments');
+    script.setAttribute('issue-term', 'pathname');
+    script.setAttribute('theme', 'github-light');
+    script.setAttribute('crossorigin', 'anonymous');
+    script.async = true;
+    
+    utterancesContainer.appendChild(script);
+    }
+
+    // 페이지 내용이 변경될 때마다 이 함수를 호출해야 합니다
+    // GitBook의 네비게이션 시스템에 연결해야 할 수 있습니다
+</script>
