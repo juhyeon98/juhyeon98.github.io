@@ -48,7 +48,7 @@
 <!-- utteranc script -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Create a new script element
+        // 'utteranc' script 로드 및 초기화
         const script = document.createElement('script');
         script.src = "https://utteranc.es/client.js";
         script.setAttribute('repo', 'juhyeon98/blog-comments');
@@ -56,14 +56,21 @@
         script.setAttribute('theme', 'github-light');
         script.setAttribute('crossorigin', 'anonymous');
         script.async = true;
-
-        // Append the script to the body or a specific container
-        script.onload = function() {
-            // Optional: Force the system to reload comments after the script is loaded
-            window.Utterances.load();
-        };
         
-        // Append the script to the page
-        document.body.appendChild(script);
+        // 스크립트가 로드된 후, 댓글을 로드할 위치를 지정
+        script.onload = function() {
+            // utteranc 스크립트가 정상적으로 로드된 후 초기화
+            const commentsContainer = document.getElementById('utteranc-comments');
+            if (commentsContainer) {
+                commentsContainer.innerHTML = '';  // 이전 내용 초기화
+                window.Utterances.load();  // 댓글 시스템 로드
+            }
+        };
+
+        // 'utteranc-comments' 컨테이너가 포함된 위치에 스크립트 삽입
+        const section = document.querySelector('.normal.markdown-section');
+        if (section) {
+            section.appendChild(script); // 스크립트 삽입
+        }
     });
 </script>
