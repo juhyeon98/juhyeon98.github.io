@@ -26,7 +26,9 @@ $ echo $XDG_SESSION_TYPE
     - X11 서버는 커널과 X11 클라이언트의 징검다리 역할을 한다.
 
 ## X11의 구조
-![x11의 구조](../assets/resource/x11구조.png)
+<p align="center">
+    <img src="../assets/resource/x11구조.png" width="50%" height="50%">
+</p>
 - 전체적인 동작 원리는 다음과 같다.
 <br>
 1. 입력 장치로부터 이벤트가 발생하면 커널이 받아서 evdev를 통해 X11 서버로 전송한다.
@@ -42,7 +44,9 @@ $ echo $XDG_SESSION_TYPE
 - 그리고 X11의 구조는 중앙 서버에 집중되어 있을 뿐만 아니라, 어떠한 클라이언트든 접근할 수 있는 구조이기 때문에 보안적으로 취약하다.
 
 ## Wayland
-![](../assets/resource/wayland구조.png)
+<p align="center">
+    <img src="../assets/resource/wayland구조.png" width="50%" height="50%">
+</p>
 - Wayland 역시 X11과 동일한 기능을 가진 프로그램이다.
 - 단, 구조에서 차이가 난다.
 - X11 서버 구조에서 달라진 것은 컴포지터가 직접 이벤트를 받고 렌더링 요청을 받는 구조이기 때문에 성능적으로 X11보다 빠르다.
