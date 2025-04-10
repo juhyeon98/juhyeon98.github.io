@@ -34,7 +34,6 @@ typedef node_t list_t;
 ## 삽입
 - 리스트에서는 기본적으로 헤드(head)부분이 있다.
 - 리스트는 헤드로만 접근이 가능하고, 헤드를 통해서 다른 요소들을 접근할 수 있다.
-- 삽입 역시 헤드부분 - 앞 부분에 삽입이 되도록 우선 구현을 해보자.
 - 삽입 원리는는 다음과 같다.
 	1. 삽입할 데이터를 가지고 있는 노드를 하나 생성한다.
 	2. 헤드가 비어있는(`NULL`) 경우, 헤드가 곧 생성한 노드가 된다.
@@ -115,9 +114,9 @@ void remove_data(list_t* head)
 	2. `NULL` 이 될 때까지, 노드 안에 있는 데이터를 출력한다.
 
 ```c
-void display(const list_t head)
+void display(const list_t* head)
 {
-	node_t* curr = head.next;
+	node_t* curr = head->next;
 
 	system("cls");	// 화면을 지운다.
 	printf("HEAD->");

@@ -20,6 +20,7 @@ published: true
 
 - 여기에서 꼬리 노드가 헤드 노드가 되도록 해서 `NULL` 참조를 해결할 수 있다.
 - 무한 반복에 빠질 가능성이 있지만, 프로그램이 `NULL` 참조로 인해 강제 종료된다는 면에서는 훨씬 좋은 방식이다.
+- 수백개의 스레드 중에서 하나의 스레드만 무한 반복 되는 것이, 하나의 스레드가 종료됨으로 인해 프로그램 자체가 종료되는 것 보다 시스템적으로 안정적이다.
 - 이러한 방식이 바로 원형 연결 리스트이다.
 
 <p align="center">
@@ -35,9 +36,10 @@ list_t head = { 0, &head };	// 초기화
 
 ...
 
-void display(const list_t head)
+void display(const list_t* head)
 {
-	node_t* curr = head.next;
+	node_t* curr = head->next;
+
 	system("cls");
 	printf("HEAD->");
 	while (curr != head)
