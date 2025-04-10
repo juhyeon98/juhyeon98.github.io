@@ -4,7 +4,7 @@ author: 이주현
 date: 2024-09-10
 category: "Data struct"
 layout: post
-tag: ["Data strcut"]
+tag: ["Data strcut", "Linked list"]
 published: true
 ---
 
@@ -106,6 +106,28 @@ void remove_data(list_t* head)
 	node_t* next_node = head->next;
 	head->next = next_node->next;
 	free(next_node);
+}
+```
+
+## 화면 출력
+- 화면에 출력하는 함수는 반복문을 통해 리스트를 순환해야 한다.
+	1. `head` 의 다음 노드에서부터 시작한다.
+	2. `NULL` 이 될 때까지, 노드 안에 있는 데이터를 출력한다.
+
+```c
+void display(const list_t head)
+{
+	node_t* curr = head.next;
+
+	system("cls");	// 화면을 지운다.
+	printf("HEAD->");
+	while (curr)
+	{
+		printf("[%d]->", curr->data);
+		curr = curr->next;
+	}
+	puts("NULL");
+	getchar();	// 사용자의 입력을 기다린다.
 }
 ```
 
