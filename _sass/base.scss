@@ -135,26 +135,51 @@ pre { background-color: var(--background-color);  border: none;  padding: 0;  ma
 .post-nav .prev { text-align: left; }
 .post-nav .next { text-align: right; }
 
-.tag-filters {
-  margin-bottom: 1rem;
+.search-wrapper {
+  position: relative;
+  margin-bottom: 1.5rem;
 }
 
-.tag-btn {
-  margin-right: 0.5rem;
-  cursor: pointer;
+#tag-search {
+  width: 100%;
+  padding: 6px 10px;
   background: none;
   border: 1px solid #aaa;
-  padding: 2px 8px;
   color: inherit;
+  font-family: inherit;
+  font-size: 1rem;
 }
 
-.tag-btn:hover {
-  background: #aaa;
-  color: #000;
+#autocomplete-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 1px solid #aaa;
+  border-top: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+  background: #111;
+}
+
+#autocomplete-list li {
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+#autocomplete-list li:hover {
+  background: #333;
+}
+
+.post-tags {
+  margin-top: 2px;
+  margin-bottom: 6px;
 }
 
 .tag {
   font-size: 0.8rem;
   color: #aaa;
-  margin-left: 4px;
+  margin-right: 6px;
 }
