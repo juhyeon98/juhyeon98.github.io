@@ -134,3 +134,27 @@ pre { background-color: var(--background-color);  border: none;  padding: 0;  ma
 .post-nav { display: flex;  justify-content: space-between;  border-top: var(--border);  margin-top: 2rem;  padding-top: 1rem; }
 .post-nav .prev { text-align: left; }
 .post-nav .next { text-align: right; }
+
+.tag-filters {
+  margin-bottom: 1rem;
+}
+
+.tag-btn {
+  margin-right: 0.5rem;
+  cursor: pointer;
+  background: none;
+  border: 1px solid #aaa;
+  padding: 2px 8px;
+  color: inherit;
+}
+
+.tag-btn:hover {
+  background: #aaa;
+  color: #000;
+}
+
+.tag {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-left: 4px;
+}

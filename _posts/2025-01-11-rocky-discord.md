@@ -3,6 +3,7 @@ title: "Rocky Linux - Discord 화면 공유 문제"
 layout: post
 permalink: /rocky-linux-discord
 date: 2025-01-11
+tags: ["Rocky Linux", "Linux", "Discord", "X11", "Wayland"]
 ---
 
 # Rocky Linux - Discord 화면 공유 문제
