@@ -1,20 +1,21 @@
 # Example Site settings
-
-#header_pages:
-#  - index.md
+title: 'ijhyn_logs'
+lang: 'kr'
+header_pages:
+  - index.md
 #  - about.md
 
-#footer: 'follow us on <a href="https://twitter.com/">twitter</a>'
+footer: '<a href="https://github.com/juhyeon98">GitHub</a>'
 
 plugins:
   - jekyll-seo-tag
 
 # Theme options
-# style: dark # dark (default) or light or hacker
-# listen_for_clients_preferred_style: true # true or false (default)
+style: dark # dark (default) or light or hacker
+listen_for_clients_preferred_style: true # true or false (default)
 
 # Fonts
-# disable_google_fonts: false # set true to prevent loading fonts.googleapis.com
+disable_google_fonts: false # set true to prevent loading fonts.googleapis.com
 
 # Tracking (generic, optional; loads only in production)
 # tracking:
