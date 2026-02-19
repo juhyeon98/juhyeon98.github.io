@@ -2,7 +2,7 @@
 title: "Rocky Linux - Discord 화면 공유 문제"
 layout: post
 permalink: /rocky-linux-discord
-date: 2025-11-04
+date: 2024-01-11
 ---
 
 # Rocky Linux - Discord 화면 공유 문제
