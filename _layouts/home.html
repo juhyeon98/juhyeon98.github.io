@@ -8,22 +8,21 @@ layout: default
 </div>
 
 {{ content }}
-{% assign contentwonl = content | strip_newlines %} {% unless contentwonl == ""  %} <br /> {% endunless %} <!-- add line break if there is any content -->
+{% assign contentwonl = content | strip_newlines %}
+{% unless contentwonl == "" %}<br />{% endunless %}
 
 {%- if site.posts.size > 0 -%}
-  <ul id="post-list">
+<ul id="post-list" style="list-style: none; padding: 0;">
   {% for post in site.posts %}
-    <li class="post-item" data-tags="{{ post.tags | join: ',' }}">
-      <div>
-        <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-      </div>
-    </li>
+  <li class="post-item" data-tags="{{ post.tags | join: ',' }}">
+    [{{ post.date | date: "%Y-%m-%d" }}] <a href="{{ post.url }}">{{ post.title }}</a>
+  </li>
   {% endfor %}
-  </ul>
+</ul>
 {%- endif -%}
 
 <script>
+(function() {
   const allTags = [
     {% assign all_tags = site.posts | map: "tags" | join: "," | split: "," | uniq | sort %}
     {% for tag in all_tags %}"{{ tag }}"{% unless forloop.last %},{% endunless %}{% endfor %}
@@ -31,42 +30,52 @@ layout: default
 
   const input = document.getElementById('tag-search');
   const acList = document.getElementById('autocomplete-list');
-  const postItems = document.querySelectorAll('.post-item');
 
-  input.addEventListener('input', () => {
-    const val = input.value.trim().toLowerCase();
-    acList.innerHTML = '';
+  function getPostItems() {
+    return document.querySelectorAll('.post-item');
+  }
 
-    // 포스트 필터링
-    postItems.forEach(item => {
-      const tags = item.dataset.tags.split(',');
-      if (!val || tags.some(t => t.toLowerCase().includes(val))) {
+  function filterPosts(val) {
+    getPostItems().forEach(item => {
+      const tags = item.dataset.tags ? item.dataset.tags.split(',') : [];
+      if (!val || tags.some(t => t.toLowerCase().includes(val.toLowerCase()))) {
         item.style.display = '';
       } else {
         item.style.display = 'none';
       }
     });
+  }
 
-    // 자동완성
+  function showAutocomplete(val) {
+    acList.innerHTML = '';
     if (!val) return;
-    const matches = allTags.filter(t => t.toLowerCase().includes(val));
+    const matches = allTags.filter(t => t.toLowerCase().includes(val.toLowerCase()));
     matches.forEach(tag => {
       const li = document.createElement('li');
       li.textContent = tag;
-      li.addEventListener('click', () => {
+      li.style.cursor = 'pointer';
+      li.addEventListener('mousedown', (e) => {
+        e.preventDefault(); // input blur 방지
         input.value = tag;
         acList.innerHTML = '';
-        postItems.forEach(item => {
-          const tags = item.dataset.tags.split(',');
-          item.style.display = tags.includes(tag) ? '' : 'none';
-        });
+        filterPosts(tag);
       });
       acList.appendChild(li);
     });
+  }
+
+  input.addEventListener('input', () => {
+    const val = input.value.trim();
+    filterPosts(val);
+    showAutocomplete(val);
   });
 
-  // 바깥 클릭시 자동완성 닫기
+  input.addEventListener('blur', () => {
+    setTimeout(() => { acList.innerHTML = ''; }, 150);
+  });
+
   document.addEventListener('click', e => {
     if (!e.target.closest('.search-wrapper')) acList.innerHTML = '';
   });
+})();
 </script>
