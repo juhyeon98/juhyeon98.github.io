@@ -3,7 +3,7 @@ title: "DirectX Tool Kit 라이브러리 적용"
 layout: post
 permalink: /directx-tk
 date: 2025-09-10
-tags: ["Visual Studio", "DirectX"]
+tags: [Visual Studio, DirectX]
 ---
 
 # DirectX Tool Kit 라이브러리 적용

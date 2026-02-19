@@ -3,7 +3,7 @@ title: "Git - 잘못된 branch에서 작업한 경우"
 layout: post
 permalink: /git-wrong-branchs
 date: 2025-11-09
-tags: ["Git"]
+tags: [Git]
 ---
 
 # Git - 잘못된 branch에서 작업한 경우

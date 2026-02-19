@@ -3,7 +3,7 @@ title: "Git - Origin과 Upsream 동기화"
 layout: post
 permalink: /git-origin-upsream
 date: 2024-12-27
-tags: ["Git"]
+tags: [Git]
 ---
 
 # Origin 과 Upstream 동기화
