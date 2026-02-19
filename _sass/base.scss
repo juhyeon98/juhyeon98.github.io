@@ -131,6 +131,6 @@ pre { background-color: var(--background-color);  border: none;  padding: 0;  ma
 .highlight .vi { color: var(--code-color-7); } /* Name.Variable.Instance */
 .highlight .il { color: var(--code-color-14); } /* Literal.Number.Integer.Long */
 
-.post-nav { display: flex;  justify-content: space-between;  margin-top: 2rem;  padding-top: 1rem;  border-top: var(--border); }
+.post-nav { display: flex;  justify-content: space-between;  border-top: var(--border);  margin-top: 2rem;  padding-top: 1rem; }
 .post-nav .prev { text-align: left; }
 .post-nav .next { text-align: right; }
