@@ -5,7 +5,9 @@ permalink: /rocky-linux-discord
 date: 2025-11-04
 ---
 
-# 문제점 파악
+# Rocky Linux - Discord 화면 공유 문제
+
+## 문제점 파악
 
 <br/>
 
@@ -22,7 +24,6 @@ echo $XDG_SESSION_TYPE
 * 그 결과 디스플레이는 `Wayland` 라는 서버를 사용하고 있는 것을 확인할 수 있었습니다.
 * Discord 화면 공유 기능이 `Wayland`와의 호환성이 맞지 않아 발생하는 문제로 파악하여, 서버를 일반적으로 사용되는 `X11`로 변경할 필요가 있어 보였습니다.
 
-# 개념
 ## x11
 
 <br/>
@@ -54,7 +55,7 @@ echo $XDG_SESSION_TYPE
 * 그러나 문제점은 이러한 강점이 어디까지나 **이론적인 부분**이라는 점이고, 버그가 `X11` 에 비해 심하기 때문에 불안정합니다.
 * 무엇보다도 `Wayland` 를 지원하는 프로그램이 아직은 많이 없기 때문에 여전히 `X11` 이 사용되는 것이 현실입니다.
 
-# 해결책
+## 해결책
 
 <br/>
 
@@ -81,7 +82,7 @@ WaylandEnable=false
 * 이렇게 하면, GDM이 기본으로 설정되어 있는 `X11` 을 사용하게 됩니다.
 * 설정을 마치고 재부팅을 해서 화면 공유를 시도하면, 정상적으로 동작하는 것을 확인할 수 있습니다.
 
-# 참고한 자료
+## 참고한 자료
 > [Wiki - X 윈도우 시스템](https://ko.wikipedia.org/wiki/X_%EC%9C%88%EB%8F%84_%EC%8B%9C%EC%8A%A4%ED%85%9C)
 > [Wayland](https://wayland.freedesktop.org/architecture.html)
 > [X11로 변경하는 법](https://www.linux.org/threads/advantages-of-wayland-over-x11.49441/)
