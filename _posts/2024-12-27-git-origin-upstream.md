@@ -11,7 +11,7 @@ date: 2024-12-27
 ## 1. 원격 저장소 등록
 * 보통 Fork를 한 뒤, origin repo를 clone하고 원격 저장소를 확인하면, upstream이 등록되어 있지 않다.
 
-![](/assets/image/remote-1.png)
+![](/assets/image/2024-12-27-git-origin-upstream/1.png)
 
 * upstream을 등록해야 upstream의 내용들을 로컬에 가져올 수 있다.
 * 따라서, 다음과 같이 등록한다.
@@ -26,7 +26,7 @@ git remote add upstream [upstream repo url]
 
 * 이렇게 하면, 등록된 것을 확인 할 수 있다.
 
-![](/assets/image/remote-2.png)
+![](/assets/image/2024-12-27-git-origin-upstream/2.png)
 
 ## 2. Fetch 하기
 * Fetch는 지정한 저장소의 변경사항을 가져와 로컬 repo의 데이터베이스에 저장한다.

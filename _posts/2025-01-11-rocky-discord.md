@@ -24,7 +24,7 @@ echo $XDG_SESSION_TYPE
 ## x11
 
 <br/>
-<img src="/assets/image/x11.webp" width=300>
+<img src="/assets/image/2025-01-11-rocky-discord/1.webp" width=300>
 <br/>
 
 * `X11` 은 X Window System이라고도 하며, 주로 Unix 계열의 운영체제에서 윈도우 시스템 / GUI 환경을 제공하는 프로그램입니다.
@@ -41,7 +41,7 @@ echo $XDG_SESSION_TYPE
 ## Wayland
 
 <br/>
-<img src="/assets/image/wayland.webp" width=200>
+<img src="/assets/image/2025-01-11-rocky-discord/2.webp" width=200>
 <br/>
 
 * `Wayland` 역시 `X11` 과 동일하게 Unix 계열 운영체제에서 윈도우 시스템과 GUI 환경을 제공하는 프로그램(혹은 프로토콜)입니다.

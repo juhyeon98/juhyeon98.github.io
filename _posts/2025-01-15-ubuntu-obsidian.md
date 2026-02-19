@@ -4,6 +4,7 @@ layout: post
 permalink: /ubuntu-obsidian
 date: 2025-01-15
 ---
+
 # Ubuntu - Obisidian 한글입력 문제
 ## 문제점 파악
 * snap으로 설치한 Obsidian에서 한글 입력이 되지 않는 문제가 발생했습니다.
@@ -120,6 +121,6 @@ chmod +x ~/.local/share/applications/obsidian.desktop
 
 <br/>
 
-# 참고한 자료
+## 참고한 자료
 > [Snap](https://snapcraft.io/docs)
 > [문제 해결](https://lazyartisan.tistory.com/5)
