@@ -145,3 +145,7 @@ pre { background-color: var(--background-color);  border: none;  padding: 0;  ma
 .search-wrapper { position: relative;  margin-bottom: 1.5rem; }
 .post-tags { margin-top: 2px;  margin-bottom: 6px; }
 .tag { font-size: 0.8rem;  color: #aaa;  margin-right: 6px; }
+
+code, pre {
+  font-family: 'JetBrains Mono', monospace !important;
+}
