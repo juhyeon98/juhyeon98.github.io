@@ -1,9 +1,11 @@
 @charset "utf-8";
+@import url('https://cdn.jsdelivr.net/gh/naver/d2codingfont/D2Coding/D2Coding.css');
 
 /**
  * Style variables
  */
-$base-font-family:     'Source Code Pro', monospace !default;
+
+$base-font-family:     'D2Coding', monospace !default;
 $base-font-size:       12.5px !default;
 $mobile-font-size:     12px !default;
 $base-line-height:     1.5 !default;
