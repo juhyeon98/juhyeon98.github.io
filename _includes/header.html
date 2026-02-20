@@ -2,21 +2,15 @@
 {%- assign page_paths = site.header_pages | default: default_paths -%}
 <header>
   <div class="menu">
-    <div class="menu-inner">
-      <ul>
-        {%- for path in page_paths -%}
-          {%- assign my_page = site.pages | where: "path", path | first -%}
-          {%- if my_page.title -%}
-          <li>
-            <a href="{{ my_page.url | relative_url }}"{% if page.url == my_page.url %} aria-current="page"{% endif %}>{{ my_page.title | escape }}</a>
-          </li>
-          {%- endif -%}
-        {%- endfor -%}
-      </ul>
-      <div class="search-wrapper">
-        <input type="text" id="tag-search" placeholder="search by tag..." autocomplete="off">
-        <ul id="autocomplete-list"></ul>
-      </div>
-    </div>
+    <ul>
+      {%- for path in page_paths -%}
+        {%- assign my_page = site.pages | where: "path", path | first -%}
+        {%- if my_page.title -%}
+        <li>
+          <a href="{{ my_page.url | relative_url }}"{% if page.url == my_page.url %} aria-current="page"{% endif %}>{{ my_page.title | escape }}</a>
+        </li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
   </div>
 </header>
