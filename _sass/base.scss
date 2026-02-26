@@ -1,11 +1,16 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
-
+@font-face {
+    font-family: 'NeoDunggunmo';
+    src: url(../assets/font/neodgm.woff2) format('woff2'),
+         url(../assets/font/neodgm.woff) format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
 /**
 * Style variables
 */
 
-$base-font-family: 'JetBrains Mono', 'Malgun Gothic', monospace !default;
+$base-font-family: 'NeoDunggunmo', monospace !default;
 $base-font-size:       12.5px !default;
 $mobile-font-size:     12px !default;
 $base-line-height:     1.5 !default;
@@ -146,4 +151,4 @@ pre { background-color: var(--background-color);  border: none;  padding: 0;  ma
 .post-tags { margin-top: 2px;  margin-bottom: 6px; }
 .tag { font-size: 0.8rem;  color: #aaa;  margin-right: 6px; }
 
-code, pre { font-family: 'JetBrains Mono', monospace !important;  tab-size: 4; }
+code, pre { font-family: 'NeoDunggunmo', monospace !important;  tab-size: 4; }
