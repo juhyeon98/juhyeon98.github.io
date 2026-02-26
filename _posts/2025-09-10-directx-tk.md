@@ -14,7 +14,7 @@ tags: [Visual Studio, DirectX]
 ## DirectXTK 빌드
 
 <br/>
-<img src="/assets/image/2025-09-10-directx-tk/1.png" width=600>
+<img src="/assets/image/2025-09-10-directx-tk/1.png">
 <br/>
 
 * [DirectXTK GitHub 레포지토리](https://github.com/microsoft/DirectXTK)에서 clone 한다.
@@ -22,7 +22,7 @@ tags: [Visual Studio, DirectX]
 * 여기에서는 `DirectXTK\_Desktop\_2022\_Win10` 을 선택
 
 <br/>
-<img src="/assets/image/2025-09-10-directx-tk/2.png" width=600>
+<img src="/assets/image/2025-09-10-directx-tk/2.png">
 <br/>
 
 * 솔루션 파일을 열고 `빌드 - 솔루션 빌드` 를 통해 솔루션을 빌드한다.
@@ -35,8 +35,8 @@ tags: [Visual Studio, DirectX]
 * `프로젝트 - 속성 - VC++ 디렉터리` 에서 포함 디렉터리를 선택하여 편집한다.
 
 <br/>
-<img src="/assets/image/2025-09-10-directx-tk/3.png" width=600>
-<img src="/assets/image/2025-09-10-directx-tk/4.png" width=600>
+<img src="/assets/image/2025-09-10-directx-tk/3.png">
+<img src="/assets/image/2025-09-10-directx-tk/4.png">
 <br/>
 
 ## 라이브러리 가져오기
@@ -47,6 +47,6 @@ tags: [Visual Studio, DirectX]
 * `프로젝트 - 속성 - VC++ 디렉터리` 에 가서 라이브러리 디렉터리를 선택하여 편집한다.
 
 <br/>
-<img src="/assets/image/2025-09-10-directx-tk/5.png" width=600>
-<img src="/assets/image/2025-09-10-directx-tk/6.png" width=600>
+<img src="/assets/image/2025-09-10-directx-tk/5.png">
+<img src="/assets/image/2025-09-10-directx-tk/6.png">
 <br/>
