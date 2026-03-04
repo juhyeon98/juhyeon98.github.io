@@ -1,16 +1,11 @@
 @charset "utf-8";
-@font-face {
-    font-family: 'NeoDunggunmo';
-    src: url(../assets/font/neodgm.woff2) format('woff2'),
-         url(../assets/font/neodgm.woff) format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Fira+Code:wght@400;700&display=swap');
+
 /**
 * Style variables
 */
 
-$base-font-family: 'NeoDunggunmo', monospace !default;
+$base-font-family: 'Noto Sans KR', sans-serif !default;
 $base-font-size:       12.5px !default;
 $mobile-font-size:     12px !default;
 $base-line-height:     1.5 !default;
@@ -151,6 +146,6 @@ pre { background-color: var(--background-color);  border: none;  padding: 0;  ma
 .post-tags { margin-top: 2px;  margin-bottom: 6px; }
 .tag { font-size: 0.8rem;  color: #aaa;  margin-right: 6px; }
 
-code, pre { font-family: 'NeoDunggunmo', monospace !important;  tab-size: 4; }
+code, pre { font-family: 'Fira Code', monospace !important; }
 
 img { max-width: 100%; height: auto; }
