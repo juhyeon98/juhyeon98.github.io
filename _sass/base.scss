@@ -3,7 +3,7 @@
 /**
  * Style variables
  */
-$base-font-family:     'Source Code Pro', monospace !default;
+$base-font-family:     'Source Code Pro', 'Noto Sans KR', monospace !default;
 $base-font-size:       12.5px !default;
 $mobile-font-size:     12px !default;
 $base-line-height:     1.5 !default;
@@ -130,3 +130,9 @@ pre { background-color: var(--background-color);  border: none;  padding: 0;  ma
 .highlight .vg { color: var(--code-color-7); } /* Name.Variable.Global */
 .highlight .vi { color: var(--code-color-7); } /* Name.Variable.Instance */
 .highlight .il { color: var(--code-color-14); } /* Literal.Number.Integer.Long */
+
+/**
+ * Custom
+ */
+code, pre { font-family: 'Source Code Pro', 'Noto Sans KR', monospace !important; }
+img { max-width: 100%; height: auto; }
