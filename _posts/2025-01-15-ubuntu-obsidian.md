@@ -67,7 +67,9 @@ chmod +x Obsidian-1.7.7.AppImage # 앱 이름이나 버전은 다를 수 있습�
 <br/>
 
 ```bash
-cd squashfs-root; sudo chown root:root chrome-sandbox; sudo chmod 4755 chrome-sandbox;
+cd squashfs-root;
+sudo chown root:root chrome-sandbox;
+sudo chmod 4755 chrome-sandbox;
 ```
 
 <br/>
