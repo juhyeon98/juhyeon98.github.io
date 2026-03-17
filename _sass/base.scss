@@ -3,7 +3,7 @@
 /**
  * Style variables
  */
-$base-font-family:     'Source Code Pro', 'Noto Sans KR', monospace !default;
+$base-font-family:     'Source Code Pro', monospace !default;
 $base-font-size:       12.5px !default;
 $mobile-font-size:     12px !default;
 $base-line-height:     1.5 !default;
@@ -134,5 +134,5 @@ pre { background-color: var(--background-color);  border: none;  padding: 0;  ma
 /**
  * Custom
  */
-// code, pre { font-family: 'Source Code Pro', 'Noto Sans KR', monospace !important; }
+pre { font-family: 'Source Code Pro', monospace !important; }
 img { max-width: 100%; height: auto; }
